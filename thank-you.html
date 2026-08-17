@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you — Northline Coffee Roasters</title>
+
+<!-- ============================================================
+     GTM SNIPPET GOES HERE TOO — every page in your site needs it
+     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+     })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+     This page is your natural "conversion" URL — in Google Ads,
+     you can set up a simple conversion action that just checks
+     whether someone loaded /thank-you.html.
+     ============================================================ -->
+
+<style>
+  :root{
+    --ink:#2b241c;
+    --paper:#f6f1e7;
+    --rust:#a4491f;
+    --line:#d8cdb8;
+    --muted:#7a7060;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Iowan Old Style','Georgia',serif;
+    background:var(--paper);
+    color:var(--ink);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  header{
+    border-bottom:1px solid var(--line);
+    padding:20px 24px;
+  }
+  .mark{
+    font-family:'Courier New',monospace;
+    letter-spacing:0.08em;
+    font-size:14px;
+    text-transform:uppercase;
+  }
+  .mark strong{color:var(--rust);}
+  main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 24px;
+  }
+  .eyebrow{
+    font-family:'Courier New',monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--rust);
+    margin-bottom:14px;
+  }
+  h1{font-size:36px;font-weight:400;margin:0 0 14px;}
+  p{color:var(--muted);max-width:420px;margin:0 auto 30px;}
+  a.back{
+    font-family:'Courier New',monospace;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid var(--rust);
+    padding-bottom:2px;
+  }
+  footer{border-top:1px solid var(--line);padding:26px 24px;text-align:center;font-family:'Courier New',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;}
+</style>
+</head>
+<body>
+
+<!-- GTM NOSCRIPT — goes immediately after opening <body> tag
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
+
+<header>
+  <div class="mark"><strong>Northline</strong> Coffee Roasters</div>
+</header>
+
+<main>
+  <div class="eyebrow">Conversion event</div>
+  <h1>You've reached the conversion page.</h1>
+  <p>If someone lands here for real, that's the moment to count as a conversion — in Google Ads, this URL is what a "Page load" conversion action would watch for.</p>
+  <a class="back" href="index.html">← Back to the practice site</a>
+</main>
+
+<footer>Practice site — built for learning GA4 &amp; GTM — not a real store</footer>
+
+</body>
+</html>

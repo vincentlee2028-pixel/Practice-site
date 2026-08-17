@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northline Coffee Roasters — Practice Site</title>
+
+<!-- ============================================================
+     GTM SNIPPET GOES HERE (in <head>, as high as possible)
+     Replace GTM-XXXXXXX with your real container ID
+     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+     })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+     ============================================================ -->
+
+<style>
+  :root{
+    --ink:#2b241c;
+    --paper:#f6f1e7;
+    --rust:#a4491f;
+    --moss:#4a5a3f;
+    --line:#d8cdb8;
+    --muted:#7a7060;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Iowan Old Style','Georgia',serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.5;
+  }
+  header{
+    border-bottom:1px solid var(--line);
+    padding:20px 24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .mark{
+    font-family:'Courier New',monospace;
+    letter-spacing:0.08em;
+    font-size:14px;
+    text-transform:uppercase;
+  }
+  .mark strong{color:var(--rust);}
+  nav a{
+    font-family:'Courier New',monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--muted);
+    text-decoration:none;
+    margin-left:20px;
+  }
+  main{max-width:760px;margin:0 auto;padding:60px 24px 100px;}
+  .eyebrow{
+    font-family:'Courier New',monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--rust);
+    margin-bottom:14px;
+  }
+  h1{
+    font-size:44px;
+    line-height:1.08;
+    margin:0 0 18px;
+    font-weight:400;
+  }
+  .lede{
+    font-size:19px;
+    color:#3c352a;
+    max-width:520px;
+    margin-bottom:36px;
+  }
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:70px;}
+  button, .btn{
+    font-family:'Courier New',monospace;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    padding:14px 26px;
+    border-radius:2px;
+    cursor:pointer;
+    border:1px solid var(--ink);
+    background:var(--ink);
+    color:var(--paper);
+  }
+  button:hover, .btn:hover{background:var(--rust);border-color:var(--rust);}
+  .btn-outline{
+    background:transparent;
+    color:var(--ink);
+  }
+  .btn-outline:hover{background:transparent;color:var(--rust);border-color:var(--rust);}
+
+  section{border-top:1px solid var(--line);padding:44px 0;}
+  section h2{
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    font-family:'Courier New',monospace;
+    color:var(--muted);
+    margin:0 0 24px;
+  }
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .card{border:1px solid var(--line);padding:22px;}
+  .card h3{margin:0 0 8px;font-size:17px;font-weight:400;}
+  .card p{margin:0;font-size:14px;color:var(--muted);}
+  .card .price{font-family:'Courier New',monospace;color:var(--rust);font-size:13px;margin-top:10px;}
+
+  form{max-width:420px;}
+  label{display:block;font-family:'Courier New',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:6px;margin-top:16px;}
+  input{width:100%;padding:11px 12px;border:1px solid var(--line);background:#fff;font-family:inherit;font-size:15px;color:var(--ink);}
+  input:focus{outline:none;border-color:var(--rust);}
+  form button{margin-top:22px;width:100%;}
+
+  footer{border-top:1px solid var(--line);padding:26px 24px;text-align:center;font-family:'Courier New',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;}
+
+  @media(max-width:640px){
+    h1{font-size:32px;}
+    .cards{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- GTM NOSCRIPT — goes immediately after opening <body> tag
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
+
+<header>
+  <div class="mark"><strong>Northline</strong> Coffee Roasters</div>
+  <nav>
+    <a href="#beans">Beans</a>
+    <a href="#subscribe">Subscribe</a>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Practice site — not a real business</div>
+  <h1>A small roastery site, built to break and rebuild your tracking on.</h1>
+  <p class="lede">This page has real, trackable moments on it — a button click, a scroll point, and a form submit — so your GA4 and GTM setup has something honest to measure.</p>
+
+  <div class="cta-row">
+    <button id="cta-primary" onclick="alert('Tracked click ✓ — this is where a Google Ads conversion tag would fire.')">Shop the roast</button>
+    <a class="btn btn-outline" href="thank-you.html" id="cta-secondary">See the confirmation page →</a>
+  </div>
+
+  <section id="beans">
+    <h2>Current roast</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Low Ridge</h3>
+        <p>Light roast, single origin, stone fruit and black tea.</p>
+        <div class="price">$19 / 12oz</div>
+      </div>
+      <div class="card">
+        <h3>Marrow</h3>
+        <p>Medium roast, cocoa and toasted hazelnut, all-day drinker.</p>
+        <div class="price">$18 / 12oz</div>
+      </div>
+      <div class="card">
+        <h3>Harbor Dark</h3>
+        <p>Dark roast, molasses and cedar, built for espresso.</p>
+        <div class="price">$20 / 12oz</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="subscribe">
+    <h2>Join the list — this is your form conversion</h2>
+    <form id="signup-form" action="thank-you.html" method="get">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <button type="submit">Sign up</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>What to actually do with this page</h2>
+    <p style="color:var(--muted);font-size:14px;max-width:560px;">
+      Once your GTM snippet is installed (see the comments in this file's source), build a Click trigger on <code>#cta-primary</code>, a Form Submission trigger on <code>#signup-form</code>, and a Scroll Depth trigger for this page. Fire your GA4 event tags off each one, then check GA4's Realtime report to confirm they're landing.
+    </p>
+  </section>
+</main>
+
+<footer>Practice site — built for learning GA4 &amp; GTM — not a real store</footer>
+
+</body>
+</html>
